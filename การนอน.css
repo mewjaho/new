@@ -1,0 +1,14 @@
+* {
+  font-family: "Mali", cursive;
+}
+
+h1 {
+  text-align: center;
+
+  font-family: "Mali", cursive;
+
+  background-color: rgb(238, 151, 238);
+}
+.card {
+  margin-left: 300px;
+}

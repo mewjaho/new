@@ -1,0 +1,11 @@
+* {
+  font-family: "Mali", cursive;
+
+  color: black;
+}
+table {
+  text-align: center;
+}
+.card {
+  left: 300px;
+}
