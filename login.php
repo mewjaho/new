@@ -1,12 +1,12 @@
-
 <?php
-require("dbm.php");
-$sql = "SELECT * FROM Medical";
+    session_start();
+    include('dbm.php'); 
 
-$result=mysqli_query($connect,$sql);
-
+    $HN=$_GET['HN'];
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +18,7 @@ $result=mysqli_query($connect,$sql);
   <body >
 
 
-  
+  <a href="/p1/p1.html"><img src="/img/icon.png" width="50" id="icon"></a><br>
       <img 
         src="https://cdn-icons-png.flaticon.com/512/3790/3790737.png" width="120"
          />
@@ -28,19 +28,23 @@ $result=mysqli_query($connect,$sql);
   
        <h1>Hospital Number</h1>
        <form action="login_db.php" method="POST"> 
-       
        <?php if (isset($_SESSION['error'])) : ?>
-         
+        
         <h style="color:red;">  
                  <?php 
                      echo $_SESSION['error'];
                      unset($_SESSION['error']);
                  ?>
                  <?php endif ?><br>
-
-       <input type="text" name="" placeholder="Hospital Number"><br>
-       <button type="submit"name="HN"  >Sign In</button></a>
        
+
+                
+    
+       <input type="text" name="HN" placeholder="Hospital Number" ><br>
+       
+      <button type="submit"name="HNm" >Sign In</button></a>
+      
+   
 </form>
     
     
