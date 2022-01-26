@@ -1,13 +1,26 @@
 <?php
-require('Db.php');
-$HN= $_GET['idp'];
+require('Dm.php');
 
-$sql="DELETE FROM Medical WHERE HN=$HN";
+$HN=$_POST['HN'];
+$date=$_POST['date'];
+$da=$_POST['da'];
+// $da=$_GET['idp'];
+// $sql="DELETE  FROM m3 WHERE da='$da' ";
+
+// $result=mysqli_query($connect,$sql);
+
+// if($result){
+//  echo"ลบข้อมูลสำเร็จ";
+//   exit(0);
+// }else{
+// echo "เกิดข้อผิดพลาด";
+// }
+// echo $HN;
+// echo $da;
+$sql="DELETE  FROM m3 WHERE da='$da'and HN='$HN' ";
 $result=mysqli_query($connect,$sql);
-
-
 if($result){
- header('location:index.php');
+ echo"ลบข้อมูลสำเร็จ";
   exit(0);
 }else{
 echo "เกิดข้อผิดพลาด";
